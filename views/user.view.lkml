@@ -37,7 +37,6 @@ view: user {
   }
 
   measure: count {
-    type: count_distinct
-    drill_fields: [user, entry.count]
+    type: count
   }
 }
