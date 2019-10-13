@@ -66,6 +66,7 @@ view: project {
   measure: budget_hours {
     type: sum
     sql: ${budget_hours_dimension} ;;
+    value_format: "#,##0.00"
   }
 
   measure: count {

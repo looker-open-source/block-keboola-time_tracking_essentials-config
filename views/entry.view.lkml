@@ -112,6 +112,7 @@ view: entry {
     description: "All recorded hours."
     type: sum
     sql: ${hours_dimension} ;;
+    value_format: "#,##0.00"
     drill_fields: [detail*, hours]
   }
 
@@ -119,13 +120,23 @@ view: entry {
     description: "Hours flagged as billable."
     type: sum
     sql: ${billable_hours_dimension} ;;
+    value_format: "#,##0.00"
     drill_fields: [detail*, billable_hours]
+  }
+
+  measure: non_billable_hours {
+    description: "All recorded hours without billable ones."
+    type: sum
+    sql: ${hours_dimension}-${billable_hours_dimension} ;;
+    value_format: "#,##0.00"
+    drill_fields: [detail*, non_billable_hours]
   }
 
   measure: hour_rate {
     label: "Avg. Hour Rate"
     type: average
     sql: ${hour_rate_dimension} ;;
+    value_format: "#,##0.00"
     drill_fields: [detail*, hour_rate]
   }
 
@@ -133,6 +144,7 @@ view: entry {
     description: "Task hour price * entry duration (before over budget adjustment)."
     type: sum
     sql: ${price_original_dimension} ;;
+    value_format: "#,##0.00"
     drill_fields: [detail*, price_original]
   }
 
@@ -140,6 +152,7 @@ view: entry {
     description: "Adjusted price of the hours according to the budget (if hours are over budget, price is set to 0)."
     type: sum
     sql: ${billable_price_dimension} ;;
+    value_format: "#,##0.00"
     drill_fields: [detail*, billable_price]
   }
 
