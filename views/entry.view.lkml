@@ -28,7 +28,9 @@ view: entry {
       time,
       date,
       week,
+      day_of_week,
       month,
+      day_of_month,
       quarter,
       year
     ]
