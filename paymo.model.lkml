@@ -37,3 +37,5 @@ explore: entry {
     relationship: many_to_one
   }
 }
+
+explore: workday {}
