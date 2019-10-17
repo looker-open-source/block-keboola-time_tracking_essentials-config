@@ -17,6 +17,7 @@ view: workday {
   }
 
   dimension: workday {
+    description: "Flags workdays (Mon-Fri by default. You can change it in Keboola Connection)."
     type: string
     sql: ${TABLE}."WORKDAY" ;;
   }

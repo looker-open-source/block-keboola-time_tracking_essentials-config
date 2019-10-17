@@ -2,6 +2,7 @@ view: entry {
   sql_table_name: ENTRY ;;
 
   dimension: entry_id {
+    description: "Has a link to entry in Paymo app."
     label: "Entry ID"
     primary_key: yes
     type: string
@@ -38,11 +39,13 @@ view: entry {
   }
 
   dimension: billable {
+    description: "Flags billable entries."
     type: string
     sql: ${TABLE}."BILLABLE" ;;
   }
 
   dimension: billed {
+    description: "Flags if the entry is already billed."
     type: string
     sql: ${TABLE}."BILLED" ;;
   }
@@ -53,6 +56,7 @@ view: entry {
   }
 
   dimension: entry_url {
+    description: "URL to Paymo App"
     hidden: yes
     type: string
     sql: ${TABLE}."ENTRY_URL" ;;
@@ -64,6 +68,7 @@ view: entry {
   }
 
   dimension: within_budget {
+    description: "Marks if the entry is still in the budget set in Paymo. 'Excluded' is used for non-billable entries."
     type: string
     sql: ${TABLE}."WITHIN_BUDGET" ;;
   }

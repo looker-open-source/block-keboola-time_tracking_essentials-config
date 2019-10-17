@@ -25,6 +25,7 @@ view: task {
   }
 
   dimension: task_billable {
+    description: "Flags if task is billable."
     type: string
     sql: ${TABLE}."TASK_BILLABLE" ;;
   }

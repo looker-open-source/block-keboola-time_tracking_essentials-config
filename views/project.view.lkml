@@ -2,6 +2,7 @@ view: project {
   sql_table_name: PROJECT ;;
 
   dimension: project_id {
+    description: "Has a link to project in Paymo app."
     label: "Project ID"
     primary_key: yes
     type: string
@@ -31,11 +32,13 @@ view: project {
   }
 
   dimension: billable {
+    description: "Flags if project is billable."
     type: string
     sql: ${TABLE}."BILLABLE" ;;
   }
 
   dimension: project {
+    description: "Has a link to project in Paymo app."
     type: string
     sql: ${TABLE}."NAME" ;;
     html: <a href={{project_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
@@ -52,6 +55,7 @@ view: project {
   }
 
   dimension: project_url {
+    description: "URL to Paymo App"
     hidden: yes
     type: string
     sql: ${TABLE}."PROJECT_URL" ;;

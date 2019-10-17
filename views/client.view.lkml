@@ -2,6 +2,7 @@ view: client {
   sql_table_name: CLIENT ;;
 
   dimension: client_id {
+    description: "Has a link to client in Paymo app."
     label: "Client ID"
     primary_key: yes
     type: string
@@ -15,6 +16,7 @@ view: client {
   }
 
   dimension: client {
+    description: "Has a link to client in Paymo app."
     type: string
     sql: ${TABLE}."CLIENT" ;;
     html: <a href={{client_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
@@ -26,6 +28,7 @@ view: client {
   }
 
   dimension: client_url {
+    description: "URL to Paymo App"
     hidden: yes
     type: string
     sql: ${TABLE}."CLIENT_URL" ;;

@@ -2,6 +2,7 @@ view: user {
   sql_table_name: USER ;;
 
   dimension: user_id {
+    description: "Has a link to user in Paymo app."
     label: "User ID"
     primary_key: yes
     type: string
@@ -20,6 +21,7 @@ view: user {
   }
 
   dimension: user {
+    description: "Has a link to user in Paymo app."
     type: string
     sql: ${TABLE}."USER" ;;
     html: <a href={{user_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
