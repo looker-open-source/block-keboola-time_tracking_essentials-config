@@ -4,7 +4,7 @@ connection: "@{connection}"
 include: "/views/**/*.view"
 
 # include all lookml dashboards
-#include: "*.dashboard.lookml"
+include: "*.dashboard.lookml"
 
 datagroup: salesforce_mrr_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;

@@ -2,7 +2,7 @@
   title: Paymo Employee Detail
   layout: newspaper
   elements:
-  - name: ''
+  - name: 'powered by'
     type: text
     body_text: <a href="https://keboola.com" target="_blank"> <img src="https://www.keboola.com/data/poweredByKeboola.png"
       width="100%"/>
@@ -10,7 +10,7 @@
     col: 18
     width: 6
     height: 2
-  - name: ''
+  - name: 'scaffold'
     type: text
     title_text: ''
     subtitle_text: <font size="5px"><font color="#408ef7"><b>Paymo</b></font>
@@ -18,7 +18,7 @@
     col: 0
     width: 7
     height: 2
-  - name: ''
+  - name: 'dashboard'
     type: text
     title_text: ''
     subtitle_text: <font size="5px"><font color="#408ef7"><b>Employee Detail</b></font>

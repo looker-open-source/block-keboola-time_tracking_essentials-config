@@ -2,7 +2,7 @@
   title: Paymo Overview
   layout: newspaper
   elements:
-  - name: ''
+  - name: 'powered by'
     type: text
     body_text: <a href="https://keboola.com" target="_blank"> <img src="https://www.keboola.com/data/poweredByKeboola.png"
       width="100%"/>
@@ -55,7 +55,7 @@
     width: 9
     height: 2
   - title: Billable Hours vs. Previous Month
-    name: Billable Hours vs. Previous Month
+    name: Billable Hours vs Previous Month
     model: paymo
     explore: entry
     type: looker_line
@@ -219,7 +219,7 @@
     width: 12
     height: 6
   - title: Billable vs. Non-Billable Project Work (Previous 9 Weeks)
-    name: Billable vs. Non-Billable Project Work (Previous 9 Weeks)
+    name: Billable vs Non-Billable Project Work (Previous 9 Weeks)
     model: paymo
     explore: entry
     type: looker_area
@@ -418,14 +418,14 @@
     col: 12
     width: 12
     height: 12
-  - name: ''
+  - name: 'dashboard'
     type: text
     subtitle_text: <font size="5px"><font color="#408ef7"><b>Overview</b></font>
     row: 0
     col: 7
     width: 11
     height: 2
-  - name: ''
+  - name: 'scaffold'
     type: text
     subtitle_text: <font size="5px"><font color="#408ef7"><b>Paymo</b></font>
     row: 0
